@@ -1,24 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oxl-qb-rBG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ОБ'ЄКТИ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListPlacesViewController" customModule="TestDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EJv-aF-jch">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="145" id="jhJ-DZ-aAr" customClass="PlaceTableViewCell" customModule="TestDesign" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jhJ-DZ-aAr" id="lFa-cm-vDj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_ic_grey" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-U1-34D">
+                                                    <rect key="frame" x="379" y="13" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="2PN-4h-Bmr"/>
+                                                        <constraint firstAttribute="width" constant="25" id="gw6-EC-F6Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-Lf-hme">
+                                                    <rect key="frame" x="11" y="13" width="176.5" height="122"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Bb7-Lf-hme" secondAttribute="height" multiplier="289:200" id="mnY-aI-pEP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OZz-Br-Al1">
+                                                    <rect key="frame" x="202.5" y="13" width="181.5" height="122"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оперний Театр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxc-ir-xuh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="181.5" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.329999999999998" id="0Jl-yi-8hb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRr-iP-R9G">
+                                                            <rect key="frame" x="0.0" y="20.5" width="181.5" height="81"/>
+                                                            <string key="text">Львівський національний академічний театр опери та балету імені Соломії Крушельницької розташований у центрі Львова на проспекті Свободи, 28. Названий на честь знаменитої української оперної співачки Соломії Крушельницької.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.2 км" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jQ-sx-UY4">
+                                                            <rect key="frame" x="0.0" y="101.5" width="181.5" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.329999999999998" id="Kdj-K9-p8t"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" red="0.1137254902" green="0.61568627450000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OZz-Br-Al1" secondAttribute="trailing" constant="10" id="04n-bY-bpX"/>
+                                                <constraint firstItem="OZz-Br-Al1" firstAttribute="bottom" secondItem="Bb7-Lf-hme" secondAttribute="bottom" id="B76-kj-gce"/>
+                                                <constraint firstItem="OZz-Br-Al1" firstAttribute="leading" secondItem="Bb7-Lf-hme" secondAttribute="trailing" constant="15" id="RM2-67-Mcy"/>
+                                                <constraint firstItem="Bb7-Lf-hme" firstAttribute="top" secondItem="lFa-cm-vDj" secondAttribute="top" constant="13" id="ZhT-4G-4vj"/>
+                                                <constraint firstItem="Bb7-Lf-hme" firstAttribute="leading" secondItem="lFa-cm-vDj" secondAttribute="leading" constant="11" id="cAd-cl-RO0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bb7-Lf-hme" secondAttribute="bottom" constant="10" id="fjD-Ch-xKo"/>
+                                                <constraint firstItem="PJL-U1-34D" firstAttribute="top" secondItem="Bb7-Lf-hme" secondAttribute="top" id="ibK-hT-mGk"/>
+                                                <constraint firstItem="OZz-Br-Al1" firstAttribute="top" secondItem="Bb7-Lf-hme" secondAttribute="top" id="onH-QJ-VBB"/>
+                                                <constraint firstAttribute="trailing" secondItem="PJL-U1-34D" secondAttribute="trailing" constant="10" id="tX5-ld-OPv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkMark" destination="PJL-U1-34D" id="3Rl-aB-bLK"/>
+                                            <outlet property="descriptionLabel" destination="DRr-iP-R9G" id="kZ2-DB-VM9"/>
+                                            <outlet property="distanceLabel" destination="8jQ-sx-UY4" id="QYe-Ve-cRV"/>
+                                            <outlet property="nameLabel" destination="nxc-ir-xuh" id="Ux4-kp-bYG"/>
+                                            <outlet property="thumbnailView" destination="Bb7-Lf-hme" id="cNV-JG-chM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B85-iW-mdw">
+                                <rect key="frame" x="11" y="708" width="392" height="55"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.61568627450000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B85-iW-mdw" secondAttribute="height" multiplier="719:101" id="5ho-0M-tCK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="ПОКАЗАТИ НА КАРТІ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pZm-XZ-jLK" kind="show" identifier="ShowMapSegue" id="lKo-mj-e2S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="B85-iW-mdw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="2th-cT-8VL"/>
+                            <constraint firstItem="EJv-aF-jch" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9KV-8f-Ncb"/>
+                            <constraint firstItem="B85-iW-mdw" firstAttribute="top" secondItem="EJv-aF-jch" secondAttribute="bottom" id="NL2-3p-5Ig"/>
+                            <constraint firstItem="EJv-aF-jch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OLo-wE-Usq"/>
+                            <constraint firstItem="EJv-aF-jch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hYg-U8-iRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B85-iW-mdw" secondAttribute="bottom" constant="11" id="hep-U3-cgA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B85-iW-mdw" secondAttribute="trailing" constant="11" id="p8b-0M-6Ld"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ОБ'ЄКТИ" id="1gM-Hj-Faw">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="hzq-Cv-JiU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EJv-aF-jch" id="Bm3-XO-RDj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.50000000000001"/>
+        </scene>
+        <!--КАРТА-->
+        <scene sceneID="1qk-sB-HYp">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="pZm-XZ-jLK" customClass="MapViewController" customModule="TestDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfm-Ga-lSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z9l-lO-Fno">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iE6-TU-x3p">
+                                <rect key="frame" x="0.0" y="718" width="414" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="xAq-ig-K4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="СПИСОК ОБ'ЄКТІВ">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideViewController" destination="pZm-XZ-jLK" eventType="touchUpInside" id="ySi-Q2-kxa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Z9l-lO-Fno" secondAttribute="bottom" id="H9U-zb-pbg"/>
+                            <constraint firstItem="Z9l-lO-Fno" firstAttribute="top" secondItem="nKI-sT-OEe" secondAttribute="top" id="ILm-Gg-r95"/>
+                            <constraint firstItem="nKI-sT-OEe" firstAttribute="trailing" secondItem="iE6-TU-x3p" secondAttribute="trailing" id="L7m-9p-z2v"/>
+                            <constraint firstItem="Z9l-lO-Fno" firstAttribute="trailing" secondItem="nKI-sT-OEe" secondAttribute="trailing" id="WaD-rl-fiI"/>
+                            <constraint firstItem="iE6-TU-x3p" firstAttribute="leading" secondItem="nKI-sT-OEe" secondAttribute="leading" id="bc9-uU-DS7"/>
+                            <constraint firstItem="nKI-sT-OEe" firstAttribute="bottom" secondItem="iE6-TU-x3p" secondAttribute="bottom" id="hCb-fP-fhk"/>
+                            <constraint firstItem="Z9l-lO-Fno" firstAttribute="leading" secondItem="nKI-sT-OEe" secondAttribute="leading" id="qWU-gE-FCI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nKI-sT-OEe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="КАРТА" id="NfV-S1-bHa">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="JXY-dx-yqr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button" destination="iE6-TU-x3p" id="whe-ve-xQn"/>
+                        <outlet property="map" destination="Z9l-lO-Fno" id="zrs-64-MSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sy-4z-UfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782.608695652174" y="113.16964285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Cc-52-zAn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oxl-qb-rBG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="aMQ-VY-mcX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.61568627450980395" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l7a-ab-CRt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThF-uY-EVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="113"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check_ic_grey" width="22" height="21.5"/>
+        <image name="menu_icon" width="22" height="16"/>
+    </resources>
 </document>
